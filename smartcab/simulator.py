@@ -144,15 +144,15 @@ class Simulator(object):
                     break
 
             # Pretty print to terminal
-            print 
-            print "/-------------------------"
+            # print
+            # print "/-------------------------"
             if testing:
                 print "| Testing trial {}".format(trial)
             else:
                 print "| Training trial {}".format(trial)
 
-            print "\-------------------------"
-            print 
+            # print "\-------------------------"
+            # print
 
             self.env.reset(testing)
             self.current_time = 0.0
@@ -183,7 +183,7 @@ class Simulator(object):
                         self.last_updated = self.current_time
                     
                     # Render text
-                    self.render_text(trial, testing)
+                    # self.render_text(trial, testing)
 
                     # Render GUI and sleep
                     if self.display:
@@ -213,12 +213,12 @@ class Simulator(object):
                 })
 
             # Trial finished
-            if self.env.success == True:
-                print "\nTrial Completed!"
-                print "Agent reached the destination."
-            else:
-                print "\nTrial Aborted!"
-                print "Agent did not reach the destination."
+            # if self.env.success == True:
+            #     print "\nTrial Completed!"
+            #     print "Agent reached the destination."
+            # else:
+            #     print "\nTrial Aborted!"
+            #     print "Agent did not reach the destination."
 
             # Increment
             total_trials = total_trials + 1
